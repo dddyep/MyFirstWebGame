@@ -1,0 +1,61 @@
+#circleDiv{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 160px;
+    height: 160px;
+}
+#guessBoard{
+    position: absolute;
+    background-image: url("pics/umaru.png");
+    background-size: 100%;
+}
+.sideCol{
+    height: 700px;
+    text-align: center;
+    background-color: #9acfea;
+}
+.midCol{
+    height: 700px;
+    text-align: center;
+}
+.rowH0{
+    height: 100px;
+    background-color: #ebcccc;
+}
+.rowH1{
+    height: 50px;
+    background-color: #c1e2b3;
+}
+.infoGrid{
+    border: thin #080808 solid;
+    height: 50px;
+}
+
+.toolGrid{
+    border: thin #080808 solid;
+    height: auto;
+}
+
+.ansGrid{
+    border: thin #c9302c solid;
+}
+
+.picRow{
+    height: 600px;
+}
+
+.toolBtn{
+    background-color: #ebcccc;
+    width: 100px;
+}
+
+.toolBtn:hover{
+    background-color: #f0ad4e;
+}
+
+.title{
+	font-size: medium;
+    text-align: center;
+    alignment: top;
+}

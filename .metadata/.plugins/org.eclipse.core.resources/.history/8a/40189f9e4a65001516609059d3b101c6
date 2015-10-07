@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just Guess!</title>
+    <link rel="stylesheet" type="text/css" href="GuessingGame.css">
+    <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <script src="Game/jquery-1.11.3.min.js"></script>
+    <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 sideCol">1</div>
+
+            <div class="col-md-8 midCol">
+                <div class="row rowH0">
+                    <div class="h1">
+                        <p>Can you guess who am I?</p>
+                    </div>
+                </div>
+
+                <div class="row rowH1">
+                    <div class="col-md-12 rowH1" id="startBtnRow">
+                        <button id="startBtn" class="rowH1">Start!!</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 picRow" id="guessBoard">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2 sideCol">
+                <div class="infoGrid row">
+                    <label for="scorePanel">Current score:</label>
+                    <br>
+                    <p id="scorePanel">100</p>
+                </div>
+
+                <div class="infoGrid row">
+                    <label for="timePanel">Current time:</label>
+                    <br>
+                    <p id="timePanel">0</p>
+                </div>
+                <div class="row toolGrid">
+                    <div class="row">
+                        <div class="h5">
+                            Tools
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <button  id="btnScatter" type="button" class="btn toolBtn active">Scatter it!</button>
+                    </div><br>
+
+                    <div class="row">
+                        <button id="btnClear" type="button" class="btn toolBtn active">Clear it!</button>
+                    </div><br>
+
+                    <div class="row">
+                        <button id="btnHalve" type="button" class="btn toolBtn active">Halve it!</button>
+                    </div><br>
+                </div>
+
+                <div class="row ansGrid">
+                    <div class="row">
+                        <p>Have a try!</p>
+                    </div>
+                    <div>
+                        <form action="" onsubmit="foolYou()" method="post">
+                            <input type="text" name="guess" placeholder="Your guess here" required>
+                            <br><br>
+                            <input type="submit" name="subGuess" value="Try it!">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="PutBalls.js"></script>
+    <script type="text/javascript" src="InfoCtrl.js"></script>
+    <script type="text/javascript" src="ChoosePic.js"></script>
+</body>
+</html>

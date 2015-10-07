@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just Guess!</title>
+    <link rel="stylesheet" type="text/css" href="GuessingGame.css">
+    <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <script src="jquery-1.11.3.min.js"></script>
+    <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 sideCol">
+            	<div class="row rowH0"></div>
+
+                <div class="row rowH1">
+            		<h2 class="title">Select a picture!</h2>
+            	</div>
+
+                <form id="picForm" name="picForm" onsubmit="ChoosePic">
+                    <label for="level" style="font-size: medium">Level</label><br>
+                    <select class="form-control" id="level" name="level">
+                        <option id="levelRand" name="levelRand" value="random">Random</option>
+                        <option id="level0" name="level0" value="level0">Level 0</option>
+                        <option id="level1" name="level1" value="level1">Level 1</option>
+                        <option id="level2" name="level2" value="level2">Level 2</option>
+                    </select><br><br>
+
+                    <label for="theme" style="font-size: medium">Theme</label><br>
+                    <select class="form-control" id="theme" name="theme">
+                        <option id="themeRand" name="themeRand" value="Random">Random</option>
+                        <option id="theme0" name="theme0" value="animal">Animal</option>
+                        <option id="theme1" name="theme1" value="popstar">Pop Star</option>
+                        <option id="theme2" name="theme2" value="animation">Animation</option>
+                    </select><br><br>
+
+                    <button type="submit" style="font-size: large">Start Game!</button>
+                    <br><br>
+                </form>
+
+                <div class="row rowH1">
+                    <h2 class="title">Upload a picture!</h2>
+                </div>
+            </div>
+
+            <div class="col-md-8 midCol">
+                <div class="row rowH0">
+                    <div class="h1">
+                        <p>Can you guess who am I?</p>
+                    </div>
+                </div>
+  		
+                <div class="row">
+                    <div class="col-md-12 picRow" id="guessBoard">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2 sideCol">
+                <div class="infoGrid row">
+                    <label for="scorePanel">Current score:</label>
+                    <br>
+                    <p id="scorePanel">100</p>
+                </div>
+
+                <div class="infoGrid row">
+                    <label for="timePanel">Current time:</label>
+                    <br>
+                    <p id="timePanel">0</p>
+                </div>
+                <div class="row toolGrid">
+                    <div class="row">
+                        <div class="h5">
+                            Tools
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <button  id="btnScatter" type="button" class="btn toolBtn active">Scatter it!</button>
+                    </div><br>
+
+                    <div class="row">
+                        <button id="btnClear" type="button" class="btn toolBtn active">Clear it!</button>
+                    </div><br>
+
+                    <div class="row">
+                        <button id="btnHalve" type="button" class="btn toolBtn active">Halve it!</button>
+                    </div><br>
+                </div>
+
+                <div class="row ansGrid">
+                    <div class="row">
+                        <p>Have a try!</p>
+                    </div>
+                    <div>
+                        <form action="" onsubmit="foolYou()" method="post">
+                            <input type="text" name="guess" placeholder="Your guess here" required>
+                            <br><br>
+                            <input type="submit" name="subGuess" value="Try it!">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="PutBalls.js"></script>
+    <script type="text/javascript" src="InfoCtrl.js"></script>
+    <script type="text/javascript" src="ChoosePic.js"></script>
+</body>
+</html>
